@@ -11,6 +11,7 @@ export const Home = () => {
 };
 
 const SectionAboutMe = () => {
+  const age = Math.floor((new Date() - new Date(1998, 5, 9)) / 31536000000);
   return (
     <section className="flex flex-col justify-between sm:flex-row mt-4 sm:mt-16">
       <div className="flex flex-col items-center sm:justify-start">
@@ -20,7 +21,7 @@ const SectionAboutMe = () => {
       <div className="sm:w-3/5 flex flex-col items-center sm:justify-start mt-5">
         <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">About Me</h1>
         <p className="flex-shrink text-gray-600 w-3/5 text-center sm:w-full">
-          Hi I am <strong>Shivaansh Agarwal</strong>, a 23 year old Web
+          Hi I am <strong>Shivaansh Agarwal</strong>, a {age} years old Web
           Developer, currently working at Temenos as a Senior Software Developer
           (Frontend) in Hyerabad, India. <br />I did my bachelors in Computer
           Science and Engineering with Specialization in Data Analytics and
