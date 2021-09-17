@@ -3,9 +3,10 @@ import { DisplayPicture, SocialMediaBar, TechSkillsList } from "../components";
 
 export const Home = () => {
   return (
-    <div>
+    <div className="px-60">
       <SectionAboutMe />
       <SectionTechStack />
+      <SectionExperience />
     </div>
   );
 };
@@ -38,6 +39,15 @@ const SectionTechStack = () => {
     <section className="flex flex-col items-center sm:justify-start sm:items-start mt-5 sm:mt-20">
       <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">Tech Stack</h1>
       <TechSkillsList />
+    </section>
+  );
+};
+
+const SectionExperience = () => {
+  return (
+    <section className="flex flex-col items-center sm:justify-start sm:items-start mt-5 sm:mt-20">
+      <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">Experience</h1>
+      WIP
     </section>
   );
 };
