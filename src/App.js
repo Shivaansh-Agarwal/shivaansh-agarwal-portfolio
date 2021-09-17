@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="w-screen">
       <Header />
-      <div className="w-11/12 sm:10/12 md:w-9/12 lg:w-7/12 xl:w-6/12 mx-auto">
+      <div className="w-11/12 sm:10/12 md:w-9/12 lg:w-8/12 mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
