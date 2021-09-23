@@ -3,7 +3,7 @@ import { DisplayPicture, SocialMediaBar, TechSkillsList } from "../components";
 
 export const Home = () => {
   return (
-    <div className="px-60">
+    <div className="xl:px-48 2xl:px-60">
       <SectionAboutMe />
       <SectionTechStack />
       <SectionExperience />
@@ -16,7 +16,7 @@ const SectionAboutMe = () => {
   return (
     <section className="flex flex-col justify-between sm:flex-row mt-4 sm:mt-16">
       <div className="flex flex-col items-center sm:justify-start">
-        <DisplayPicture imgURL="https://media-exp1.licdn.com/dms/image/C5103AQFCFNvH-ltnZQ/profile-displayphoto-shrink_200_200/0/1551121319690?e=1637193600&v=beta&t=2jGOKNyxhwN893K2xZkRDlE7HOTlJM1OIZQBC8BKqRs" />
+        <DisplayPicture imgURL="https://media-exp1.licdn.com/dms/image/C5103AQFCFNvH-ltnZQ/profile-displayphoto-shrink_800_800/0/1551121319690?e=1637193600&v=beta&t=Lp9okbfvZTTVrLFKEMrFebIfcG2Fo8Rz8s_4UxzrnIY" />
         <SocialMediaBar />
       </div>
       <div className="sm:w-3/5 flex flex-col items-center sm:justify-start mt-5">
