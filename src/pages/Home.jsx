@@ -4,14 +4,14 @@ import { DisplayPicture, SocialMediaBar, TechSkillsList } from "../components";
 export const Home = () => {
   return (
     <div className="xl:px-48 2xl:px-60">
-      <SectionAboutMe />
-      <SectionTechStack />
-      <SectionExperience />
+      <AboutMe />
+      <TechStack />
+      <Experience />
     </div>
   );
 };
 
-const SectionAboutMe = () => {
+const AboutMe = () => {
   const age = Math.floor((new Date() - new Date(1998, 5, 9)) / 31536000000);
   return (
     <section className="flex flex-col justify-between sm:flex-row mt-4 sm:mt-16">
@@ -34,7 +34,7 @@ const SectionAboutMe = () => {
   );
 };
 
-const SectionTechStack = () => {
+const TechStack = () => {
   return (
     <section className="flex flex-col items-center sm:justify-start sm:items-start mt-5 sm:mt-20">
       <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">Tech Stack</h1>
@@ -43,7 +43,7 @@ const SectionTechStack = () => {
   );
 };
 
-const SectionExperience = () => {
+const Experience = () => {
   return (
     <section className="flex flex-col items-center sm:justify-start sm:items-start mt-5 sm:mt-20">
       <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">Experience</h1>
