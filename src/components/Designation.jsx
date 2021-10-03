@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getDurationLength, getDurationString } from "../utilities/utility.js";
+import { Markdown } from "./Markdown.jsx";
 
 export const Designation = ({ position }) => {
   const [isDescriptionCollapsed, setIsDescriptionCollapsed] = useState(true);
@@ -12,6 +13,11 @@ export const Designation = ({ position }) => {
     position;
   const { years, months } = getDurationLength(startDate, endDate);
   const durationString = getDurationString(startDate, endDate);
+  const descriptionToDisplay = isDescriptionCollapsed
+    ? description.substr(0, 150)
+    : description;
+  const isBtnVisible = description.length < 150 ? false : true;
+  const btnText = isDescriptionCollapsed ? "...read more" : "...read less";
   return (
     <section className="my-4 ml-8 pl-12 border-l-4 border-pink-100">
       <div>
@@ -20,27 +26,17 @@ export const Designation = ({ position }) => {
         <div className="text-gray-500 font-light mb-2">{`${durationString} (${
           years !== 0 ? `${years} yr ` : ""
         }${months} mos)`}</div>
-        {isDescriptionCollapsed ? (
-          <div className="relative">
-            {description.substr(0, 150)}
+        <div className="relative">
+          <Markdown markdown={descriptionToDisplay} />
+          {isBtnVisible && (
             <button
               onClick={handleDescriptionCollapse}
               className="absolute bottom-0 right-0 text-sm text-gray-500 bg-white w-20"
             >
-              ...read more
+              {btnText}
             </button>
-          </div>
-        ) : (
-          <div className="relative">
-            {description}
-            <button
-              onClick={handleDescriptionCollapse}
-              className="absolute bottom-0 right-0 text-sm text-gray-500 bg-white w-20"
-            >
-              ...read less
-            </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </section>
   );

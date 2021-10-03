@@ -6,3 +6,4 @@ export { TechSkillsList } from "./TechSkillsList.jsx";
 export { BlogCard } from "./BlogCard.jsx";
 export { Company } from "./Company.jsx";
 export { Designation } from "./Designation.jsx";
+export { Markdown } from "./Markdown.jsx";
