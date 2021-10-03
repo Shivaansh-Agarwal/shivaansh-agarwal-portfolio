@@ -1,5 +1,11 @@
 import React from "react";
-import { DisplayPicture, SocialMediaBar, TechSkillsList } from "../components";
+import {
+  DisplayPicture,
+  SocialMediaBar,
+  TechSkillsList,
+  Company,
+} from "../components";
+import experienceData from "../data/experience.js";
 
 export const Home = () => {
   return (
@@ -47,7 +53,10 @@ const Experience = () => {
   return (
     <section className="flex flex-col items-center sm:justify-start sm:items-start mt-5 sm:mt-20">
       <h1 className="text-3xl sm:text-4xl pb-2 sm:pb-3">Experience</h1>
-      WIP
+      {experienceData.map((experience) => {
+        const { id } = experience;
+        return <Company key={id} experience={experience} />;
+      })}
     </section>
   );
 };

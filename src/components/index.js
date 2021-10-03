@@ -4,3 +4,5 @@ export { DisplayPicture } from "./DisplayPicture.jsx";
 export { SocialMediaBar } from "./SocialMediaBar.jsx";
 export { TechSkillsList } from "./TechSkillsList.jsx";
 export { BlogCard } from "./BlogCard.jsx";
+export { Company } from "./Company.jsx";
+export { Designation } from "./Designation.jsx";
